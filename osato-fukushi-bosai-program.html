@@ -287,14 +287,34 @@ img.photo{
 
 .footnote{margin-top:26px;font-size:12.5px;color:var(--ink-3);line-height:1.9}
 
-/* ---------- 印刷 ---------- */
+/* ---------- 印刷（A3） ---------- */
 @media print{
+  @page{size:A3 portrait;margin:14mm}
   :root{--paper:#fff;--card:#fff;--card-2:#fff;--ink:#000;--ink-2:#333;--ink-3:#666;--line:#bbb;--line-2:#ddd;--shadow:none}
-  body{font-size:10.5pt;line-height:1.7}
+  body{font-size:12pt;line-height:1.75}
   .wrap{max-width:none;padding:0}
-  section{margin-top:26px;page-break-inside:avoid}
-  .card,.plan,.qa,.contact,.step{page-break-inside:avoid}
   .cover{padding-top:0}
+  h1{font-size:34pt;margin-top:6pt}
+  .sub{font-size:15pt}
+  .lede{font-size:12.5pt;max-width:42em}
+  h2{font-size:19pt}
+  h3.card-name{font-size:16pt}
+  .catch{font-size:12.5pt}
+  .block p{font-size:11.5pt}
+  dl.meta{font-size:10.5pt}
+  .step h3{font-size:14pt}
+  .contact h2{font-size:19pt}
+  .fill-note .tel{font-size:20pt}
+  img.photo{max-width:150mm;max-height:75mm;object-fit:cover}
+  .photo{max-height:52mm;min-height:0}
+  .card-photo{padding:12px 24px 16px}
+  .card-top{padding:16px 24px 12px}
+  .card-main,.card-side{padding:14px 24px 16px}
+  .card{margin-top:14px}
+  section{margin-top:22px;break-inside:auto}
+  .sec-head,h2{break-after:avoid}
+  .card,.plan,.qa-item,.contact,.step,.point{break-inside:avoid;page-break-inside:avoid}
+  .card-photo{break-inside:avoid}
   a{text-decoration:none}
 }
 </style>
