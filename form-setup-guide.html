@@ -1,0 +1,586 @@
+<title>申込フォーム設置ガイド</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#F5F7F1;--card:#FFFFFF;--card-2:#FBFCF8;--ink:#22302A;--ink-2:#5A6A61;--ink-3:#86958C;
+  --line:#D9E0D4;--line-2:#EBEFE7;--fukushi:#2E7D5B;--fukushi-bg:#E6F1EA;
+  --bosai:#C9581D;--bosai-bg:#FAEADF;--gold:#B8860B;--gold-bg:#F7EFD7;
+  --code-bg:#F0F3ED;--code-ink:#2A3A32;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#141A16;--card:#1C231E;--card-2:#212A24;--ink:#E9F0E9;--ink-2:#A9B7AE;--ink-3:#7D8C83;
+  --line:#33403A;--line-2:#2A342E;--fukushi:#77C9A0;--fukushi-bg:#1E3229;
+  --bosai:#F0965C;--bosai-bg:#3A2519;--gold:#E0B84F;--gold-bg:#332A15;
+  --code-bg:#10160F;--code-ink:#D6E2D8;
+}}
+:root[data-theme="dark"]{
+  --paper:#141A16;--card:#1C231E;--card-2:#212A24;--ink:#E9F0E9;--ink-2:#A9B7AE;--ink-3:#7D8C83;
+  --line:#33403A;--line-2:#2A342E;--fukushi:#77C9A0;--fukushi-bg:#1E3229;
+  --bosai:#F0965C;--bosai-bg:#3A2519;--gold:#E0B84F;--gold-bg:#332A15;
+  --code-bg:#10160F;--code-ink:#D6E2D8;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);margin:0;line-height:1.85;font-size:16px;
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;}
+h1,h2,h3{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;margin:0;line-height:1.35;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:840px;margin:0 auto;padding:44px 20px 90px}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.18em;color:var(--fukushi)}
+h1{font-size:clamp(28px,5vw,42px);font-weight:900;margin:10px 0 0}
+.lede{color:var(--ink-2);margin-top:16px;max-width:34em}
+.rule{height:1.5px;background:var(--ink);border:0;margin:30px 0}
+section{margin-top:44px}
+h2{font-size:clamp(20px,3vw,26px);font-weight:900;margin-bottom:6px}
+.note{color:var(--ink-2);font-size:15px;margin-top:8px}
+
+.steps{display:grid;gap:0;margin-top:20px}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.no{width:34px;height:34px;border-radius:50%;background:var(--fukushi);color:var(--paper);
+  display:grid;place-items:center;font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:16px}
+.step h3{font-size:18px;font-weight:900;margin-bottom:5px}
+.step p{font-size:15px;color:var(--ink-2)}
+.tip{margin-top:10px;font-size:13.5px;background:var(--fukushi-bg);color:var(--ink);padding:9px 13px;border-radius:2px}
+.warn{margin-top:10px;font-size:13.5px;background:var(--bosai-bg);color:var(--ink);padding:9px 13px;border-radius:2px}
+kbd{font-family:inherit;font-weight:700;background:var(--line-2);border:1px solid var(--line);
+  border-radius:3px;padding:1px 7px;font-size:14px;white-space:nowrap}
+
+.codebar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--line);border-bottom:0;padding:12px 16px}
+.codebar span{font-size:13px;font-weight:700;color:var(--ink-2)}
+button{font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;
+  background:var(--fukushi);color:var(--paper);border:0;border-radius:3px;padding:8px 16px}
+button:hover{opacity:.9}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+pre{margin:0;background:var(--code-bg);color:var(--code-ink);border:1px solid var(--line);
+  padding:16px;overflow-x:auto;max-height:420px;overflow-y:auto;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Noto Sans Mono CJK JP",monospace;
+  font-size:12.5px;line-height:1.7}
+
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.1em;color:var(--ink-3);font-weight:700;white-space:nowrap}
+td:first-child{font-weight:700;white-space:nowrap}
+.req{color:var(--bosai);font-weight:700;font-size:12px}
+.tablewrap{overflow-x:auto}
+
+.mail{background:var(--card);border:1px solid var(--line);padding:20px 22px;margin-top:18px;
+  font-size:14px;line-height:1.9;white-space:pre-wrap;color:var(--ink-2)}
+.mail strong{color:var(--ink)}
+
+.qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:18px}
+.qa div{background:var(--card);padding:16px 18px}
+.qa h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.qa p{font-size:14px;color:var(--ink-2)}
+.foot{margin-top:40px;font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px}
+@media print{button,.codebar{display:none}pre{max-height:none}}
+</style>
+
+<div class="wrap">
+<p class="eyebrow">大郷町社会福祉協議会 ／ 職員向け手順書</p>
+<h1>申込フォーム設置ガイド</h1>
+<p class="lede">「育てよう！地域のやさしい目」事業の申込フォームを、Googleフォームで作ります。<strong>作業は15分ほど</strong>。申し込みが届くと、申込者に控えのメールが自動で届き、社協にも通知が来ます。</p>
+<hr class="rule">
+
+<section>
+  <h2>設置の手順</h2>
+  <p class="note">Googleアカウント（社協のもの）でログインした状態で始めてください。自動返信メールは、このアカウントの名前で送られます。</p>
+  <div class="steps">
+    <div class="step"><div class="no">1</div><div>
+      <h3>Apps Script を開く</h3>
+      <p>ブラウザで <strong>script.google.com</strong> を開き、左上の「新しいプロジェクト」をクリックします。</p>
+      <div class="tip">社協の共用アカウントで作ると、担当者が替わっても引き継げます。</div>
+    </div></div>
+    <div class="step"><div class="no">2</div><div>
+      <h3>コードを貼り付ける</h3>
+      <p>画面に出ている <code>function myFunction() {}</code> を<strong>すべて消してから</strong>、下のコードを貼り付けます。<kbd>Ctrl</kbd>+<kbd>A</kbd> で全選択 →<kbd>Ctrl</kbd>+<kbd>V</kbd> で貼り付け。</p>
+    </div></div>
+    <div class="step"><div class="no">3</div><div>
+      <h3>保存する</h3>
+      <p>フロッピーディスクのマークか <kbd>Ctrl</kbd>+<kbd>S</kbd> で保存します。プロジェクト名は「申込フォーム」などにしておくと分かりやすいです。</p>
+    </div></div>
+    <div class="step"><div class="no">4</div><div>
+      <h3>createForm を実行する</h3>
+      <p>画面上部の関数リストから <strong>createForm</strong> を選び、「実行」を押します。</p>
+      <div class="warn">初回だけ「承認が必要です」と出ます。→「権限を確認」→ アカウントを選択 →「詳細」→「（プロジェクト名）に移動」→「許可」の順に進めてください。Google が作った公式アプリではないため出る画面で、問題ありません。</div>
+    </div></div>
+    <div class="step"><div class="no">5</div><div>
+      <h3>URLを控える</h3>
+      <p>実行が終わると、下の「実行ログ」に3つのURLが出ます。<strong>配布用URL</strong>を町内会や学校にお伝えください。</p>
+      <div class="tip">配布用URL＝申し込む人が入力する画面／編集用URL＝設問を直す画面／回答一覧＝申し込みが貯まるスプレッドシート</div>
+    </div></div>
+    <div class="step"><div class="no">6</div><div>
+      <h3>テストする</h3>
+      <p>配布用URLを開いて、ご自身で一度申し込んでみてください。<strong>控えのメールが届き、社協にも通知が来れば完成</strong>です。テストの回答は、回答一覧から削除できます。</p>
+    </div></div>
+  </div>
+</section>
+
+<section>
+  <h2>貼り付けるコード</h2>
+  <p class="note">この中の <strong>CONFIG</strong> を書き換えれば、通知先や署名を変えられます。設問を増やしたいときはご相談ください。</p>
+  <div class="codebar">
+    <span>application-form.gs</span>
+    <button id="copy" type="button">コードをコピー</button>
+  </div>
+  <pre id="code">/**
+ * 大郷町社会福祉協議会
+ * 「育てよう！地域のやさしい目」事業
+ * 福祉教育・防災教育プログラム 申込フォーム 自動作成＋自動返信スクリプト
+ *
+ * 【使い方】
+ *  1. script.google.com を開き、「新しいプロジェクト」をクリック
+ *  2. 表示されたコードを全部消して、このファイルの中身をすべて貼り付ける
+ *  3. 下の CONFIG の中身（メールアドレスなど）を確認する
+ *  4. 上の関数リストで「createForm」を選び、「実行」を押す
+ *     → 初回は Google から許可を求められるので、許可する
+ *  5. 実行ログにフォームのURLが表示されるので、それを配布する
+ *
+ *  ※ createForm は一度だけ実行してください。
+ *    もう一度実行すると、別のフォームが新しく作られます。
+ */
+
+// ============================================================
+// 設定（ここだけ直せば内容が変わります）
+// ============================================================
+const CONFIG = {
+  formTitle: &#x27;【大郷町社会福祉協議会】福祉教育・防災教育プログラム 申込フォーム&#x27;,
+
+  // 申込みが届いたときに通知するメールアドレス（社協）
+  staffEmail: &#x27;community@oosato-syakyo.or.jp&#x27;,
+
+  // 署名に使う情報
+  jigyoName: &#x27;「育てよう！地域のやさしい目」事業&#x27;,
+  orgName: &#x27;社会福祉法人 大郷町社会福祉協議会&#x27;,
+  tel: &#x27;022-359-2753&#x27;,
+  fax: &#x27;022-359-4896&#x27;,
+  mail: &#x27;community@oosato-syakyo.or.jp&#x27;,
+  address: &#x27;宮城県黒川郡大郷町粕川字東長崎31-7&#x27;,
+  hours: &#x27;平日 8:30〜17:15（土日祝・年末年始を除く）&#x27;,
+  staffNames: &#x27;金須・及川・千田&#x27;,
+
+  // 自動返信の宛先を探すための設問名（設問名を変えたらここも変える）
+  emailItemTitle: &#x27;メールアドレス&#x27;,
+  nameItemTitle: &#x27;ご担当者のお名前&#x27;,
+  orgItemTitle: &#x27;団体名・学校名&#x27;,
+};
+
+// プログラム一覧（案内資料と同じ並び）
+const PROGRAMS = [
+  &#x27;車いす体験&#x27;,
+  &#x27;白杖体験（アイマスク体験）&#x27;,
+  &#x27;高齢者疑似体験講座&#x27;,
+  &#x27;災害ボランティアセンター運営体験&#x27;,
+  &#x27;認知症サポーター養成講座&#x27;,
+  &#x27;ボランティア入門講座&#x27;,
+  &#x27;防災ビンゴゲーム&#x27;,
+  &#x27;避難所体験&#x27;,
+  &#x27;助けられ上手・助け上手になろう！&#x27;,
+  &#x27;サバメシ作り&#x27;,
+  &#x27;まだ決まっていない／相談したい&#x27;,
+];
+
+// ============================================================
+// ① フォームを作る（最初に1回だけ実行）
+// ============================================================
+function createForm() {
+  const form = FormApp.create(CONFIG.formTitle);
+
+  form.setDescription(
+    CONFIG.orgName + &#x27;の福祉教育・防災教育プログラム（&#x27; + CONFIG.jigyoName + &#x27;）のお申し込みフォームです。\n\n&#x27; +
+    &#x27;日程や内容が決まっていなくても大丈夫です。「こんなことがしたい」だけでも送信してください。\n&#x27; +
+    &#x27;担当者から3日以内（土日祝を除く）にご連絡します。\n\n&#x27; +
+    &#x27;お急ぎの場合はお電話ください。　TEL &#x27; + CONFIG.tel + &#x27;（&#x27; + CONFIG.hours + &#x27;）&#x27;
+  );
+
+  form.setConfirmationMessage(
+    &#x27;お申し込みありがとうございます。受付いたしました。\n&#x27; +
+    &#x27;ご入力のメールアドレスに、控えのメールをお送りしています。\n&#x27; +
+    &#x27;3日以内（土日祝を除く）に、担当者からご連絡します。\n\n&#x27; +
+    CONFIG.orgName + &#x27;　TEL &#x27; + CONFIG.tel
+  );
+
+  form.setCollectEmail(false);
+  form.setAllowResponseEdits(false);
+  form.setShowLinkToRespondAgain(false);
+  form.setProgressBar(true);
+
+  // ---- 申し込む方について ----
+  form.addSectionHeaderItem()
+    .setTitle(&#x27;1. お申し込みの方について&#x27;);
+
+  form.addTextItem()
+    .setTitle(CONFIG.orgItemTitle)
+    .setHelpText(&#x27;例：○○町内会、○○小学校、○○子ども会、株式会社○○&#x27;)
+    .setRequired(true);
+
+  form.addTextItem()
+    .setTitle(CONFIG.nameItemTitle)
+    .setRequired(true);
+
+  form.addTextItem()
+    .setTitle(&#x27;電話番号&#x27;)
+    .setHelpText(&#x27;日中つながる番号をご記入ください&#x27;)
+    .setRequired(true);
+
+  const emailItem = form.addTextItem()
+    .setTitle(CONFIG.emailItemTitle)
+    .setHelpText(&#x27;このアドレスに、受付の控えメールをお送りします&#x27;)
+    .setRequired(true);
+  emailItem.setValidation(
+    FormApp.createTextValidation()
+      .requireTextIsEmail()
+      .setHelpText(&#x27;メールアドレスの形式でご記入ください&#x27;)
+      .build()
+  );
+
+  // ---- やってみたいプログラム ----
+  form.addSectionHeaderItem()
+    .setTitle(&#x27;2. やってみたいプログラム&#x27;)
+    .setHelpText(&#x27;いくつでも選べます。組み合わせのご相談も承ります。&#x27;);
+
+  form.addCheckboxItem()
+    .setTitle(&#x27;希望するプログラム&#x27;)
+    .setChoiceValues(PROGRAMS)
+    .setRequired(true);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;今回いちばん伝えたいこと・ねらい&#x27;)
+    .setHelpText(&#x27;例：子どもたちにまちのバリアに気づいてほしい／町内会で防災を自分ごとにしたい　など。決まっていなければ空欄で構いません。&#x27;)
+    .setRequired(false);
+
+  // ---- 日時・会場 ----
+  form.addSectionHeaderItem()
+    .setTitle(&#x27;3. 日時・会場&#x27;)
+    .setHelpText(&#x27;まだ決まっていない項目は「未定」とご記入ください。&#x27;);
+
+  form.addDateItem()
+    .setTitle(&#x27;実施希望日（第1希望）&#x27;)
+    .setRequired(false);
+
+  form.addDateItem()
+    .setTitle(&#x27;実施希望日（第2希望）&#x27;)
+    .setRequired(false);
+
+  form.addMultipleChoiceItem()
+    .setTitle(&#x27;希望する時間帯&#x27;)
+    .setChoiceValues([&#x27;午前&#x27;, &#x27;午後&#x27;, &#x27;夕方・夜間&#x27;, &#x27;まだ決まっていない&#x27;])
+    .setRequired(false);
+
+  form.addTextItem()
+    .setTitle(&#x27;会場&#x27;)
+    .setHelpText(&#x27;例：○○集会所、○○小学校体育館、未定&#x27;)
+    .setRequired(true);
+
+  // ---- 参加者について ----
+  form.addSectionHeaderItem()
+    .setTitle(&#x27;4. 参加する方について&#x27;);
+
+  form.addTextItem()
+    .setTitle(&#x27;参加する方（学年・年代）&#x27;)
+    .setHelpText(&#x27;例：小学4年生、町内会の役員、60〜80代のサロン参加者&#x27;)
+    .setRequired(true);
+
+  form.addTextItem()
+    .setTitle(&#x27;参加予定人数&#x27;)
+    .setHelpText(&#x27;およその人数で構いません（例：30人程度）&#x27;)
+    .setRequired(true);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;配慮が必要な方はいらっしゃいますか&#x27;)
+    .setHelpText(&#x27;車いすを使う方、アレルギーのある方、通訳が必要な方など。ある場合はご記入ください。&#x27;)
+    .setRequired(false);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;その他、ご質問・連絡事項&#x27;)
+    .setRequired(false);
+
+  // ---- 回答スプレッドシートを作って紐づける ----
+  const ss = SpreadsheetApp.create(CONFIG.formTitle + &#x27;（回答一覧）&#x27;);
+  form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
+
+  // ---- 自動返信のトリガーを設定 ----
+  removeFormTriggers_();
+  ScriptApp.newTrigger(&#x27;onFormSubmit&#x27;)
+    .forForm(form)
+    .onFormSubmit()
+    .create();
+
+  const info =
+    &#x27;\n========================================\n&#x27; +
+    &#x27;フォームができました。\n\n&#x27; +
+    &#x27;【配布用URL（この住所を町内会や学校に伝えてください）】\n&#x27; +
+    form.getPublishedUrl() + &#x27;\n\n&#x27; +
+    &#x27;【編集用URL（社協の担当者だけが使います）】\n&#x27; +
+    form.getEditUrl() + &#x27;\n\n&#x27; +
+    &#x27;【回答一覧のスプレッドシート】\n&#x27; +
+    ss.getUrl() + &#x27;\n\n&#x27; +
+    &#x27;自動返信も設定しました。テスト送信して確認してください。\n&#x27; +
+    &#x27;========================================\n&#x27;;
+  Logger.log(info);
+  return info;
+}
+
+// ============================================================
+// ② 申し込みが届いたときの自動返信（自動で動きます）
+// ============================================================
+function onFormSubmit(e) {
+  try {
+    const answers = readAnswers_(e);
+    const to = answers.map[CONFIG.emailItemTitle];
+    const personName = answers.map[CONFIG.nameItemTitle] || &#x27;&#x27;;
+    const orgTitle = answers.map[CONFIG.orgItemTitle] || &#x27;&#x27;;
+
+    // --- 申込者への自動返信 ---
+    if (to) {
+      const subject = &#x27;【受付しました】福祉教育・防災教育プログラムのお申し込み&#x27;;
+      const body =
+        (personName ? personName + &#x27; 様\n\n&#x27; : &#x27;&#x27;) +
+        &#x27;このたびは、&#x27; + CONFIG.orgName + &#x27;の福祉教育・防災教育プログラムに\n&#x27; +
+        &#x27;お申し込みいただき、ありがとうございます。\n&#x27; +
+        &#x27;下記の内容で受け付けました。\n\n&#x27; +
+        &#x27;────────────────────\n&#x27; +
+        answers.text +
+        &#x27;────────────────────\n\n&#x27; +
+        &#x27;【このあとの流れ】\n&#x27; +
+        &#x27;　1. 3日以内（土日祝を除く）に、担当者からお電話またはメールでご連絡します\n&#x27; +
+        &#x27;　2. 打ち合わせで、ねらい・プログラム・日時・会場を一緒に決めます\n&#x27; +
+        &#x27;　3. 実施計画書と進行表をお渡しし、当日に向けて準備を進めます\n\n&#x27; +
+        &#x27;日程や内容が固まっていなくても大丈夫です。ご相談しながら進めます。\n&#x27; +
+        &#x27;お急ぎの場合や、内容の変更・取り消しは、お電話ください。\n\n&#x27; +
+        &#x27;※ このメールは自動でお送りしています。ご返信いただいても担当者が確認します。\n\n&#x27; +
+        signature_();
+      MailApp.sendEmail({
+        to: to,
+        subject: subject,
+        body: body,
+        name: CONFIG.orgName,
+        replyTo: CONFIG.staffEmail,
+      });
+    }
+
+    // --- 社協への通知 ---
+    const staffSubject = &#x27;【新規申込】&#x27; + (orgTitle || &#x27;団体名なし&#x27;) + &#x27;／&#x27; + (personName || &#x27;担当者名なし&#x27;);
+    const staffBody =
+      &#x27;申込フォームに新しい回答が届きました。\n&#x27; +
+      &#x27;受付日時：&#x27; + Utilities.formatDate(new Date(), &#x27;Asia/Tokyo&#x27;, &#x27;yyyy年M月d日 HH:mm&#x27;) + &#x27;\n\n&#x27; +
+      &#x27;────────────────────\n&#x27; +
+      answers.text +
+      &#x27;────────────────────\n\n&#x27; +
+      (to ? &#x27;申込者への自動返信は送信済みです（宛先：&#x27; + to + &#x27;）。\n&#x27; : &#x27;※ メールアドレスの記入がなかったため、自動返信は送っていません。お電話でご連絡ください。\n&#x27;) +
+      &#x27;\n3日以内（土日祝を除く）のご連絡をお願いします。\n&#x27;;
+    MailApp.sendEmail({
+      to: CONFIG.staffEmail,
+      subject: staffSubject,
+      body: staffBody,
+      name: &#x27;申込フォーム自動通知&#x27;,
+      replyTo: to || CONFIG.staffEmail,
+    });
+
+  } catch (err) {
+    // 失敗しても申込自体は残るように、担当者へ知らせるだけにする
+    MailApp.sendEmail(
+      CONFIG.staffEmail,
+      &#x27;【要確認】申込フォームの自動返信でエラーが出ました&#x27;,
+      &#x27;エラー内容：\n&#x27; + err + &#x27;\n\n回答はスプレッドシートに残っています。手動でご連絡ください。&#x27;
+    );
+  }
+}
+
+// ============================================================
+// 補助
+// ============================================================
+function readAnswers_(e) {
+  const map = {};
+  const lines = [];
+  const itemResponses = e.response.getItemResponses();
+  for (let i = 0; i &lt; itemResponses.length; i++) {
+    const ir = itemResponses[i];
+    const title = ir.getItem().getTitle();
+    let value = ir.getResponse();
+    if (Object.prototype.toString.call(value) === &#x27;[object Array]&#x27;) {
+      value = value.join(&#x27;、&#x27;);
+    }
+    value = String(value == null ? &#x27;&#x27; : value);
+    map[title] = value;
+    if (value.trim() !== &#x27;&#x27;) {
+      lines.push(&#x27;■ &#x27; + title + &#x27;\n　&#x27; + value.replace(/\n/g, &#x27;\n　&#x27;) + &#x27;\n&#x27;);
+    }
+  }
+  return { map: map, text: lines.join(&#x27;\n&#x27;) };
+}
+
+function signature_() {
+  return &#x27;&#x27; +
+  &#x27;━━━━━━━━━━━━━━━━━━━━\n&#x27; +
+  CONFIG.jigyoName + &#x27;\n&#x27; +
+  CONFIG.orgName + &#x27;\n&#x27; +
+  &#x27;担当：&#x27; + CONFIG.staffNames + &#x27;\n&#x27; +
+  &#x27;〒　&#x27; + CONFIG.address + &#x27;\n&#x27; +
+  &#x27;TEL &#x27; + CONFIG.tel + &#x27;　FAX &#x27; + CONFIG.fax + &#x27;\n&#x27; +
+  &#x27;MAIL &#x27; + CONFIG.mail + &#x27;\n&#x27; +
+  &#x27;受付時間 &#x27; + CONFIG.hours + &#x27;\n&#x27; +
+  &#x27;━━━━━━━━━━━━━━━━━━━━&#x27;;
+}
+
+function removeFormTriggers_() {
+  const triggers = ScriptApp.getProjectTriggers();
+  for (let i = 0; i &lt; triggers.length; i++) {
+    if (triggers[i].getHandlerFunction() === &#x27;onFormSubmit&#x27;) {
+      ScriptApp.deleteTrigger(triggers[i]);
+    }
+  }
+}
+
+// ============================================================
+// 動作確認用（自動返信の文面を自分あてに送ってみる）
+// ============================================================
+function sendTestMail() {
+  const me = Session.getActiveUser().getEmail();
+  const dummy = {
+    map: {},
+    text:
+      &#x27;■ 団体名・学校名\n　○○町内会\n\n&#x27; +
+      &#x27;■ ご担当者のお名前\n　大郷 太郎\n\n&#x27; +
+      &#x27;■ 電話番号\n　022-000-0000\n\n&#x27; +
+      &#x27;■ 希望するプログラム\n　防災ビンゴゲーム、サバメシ作り\n\n&#x27; +
+      &#x27;■ 会場\n　○○集会所\n\n&#x27; +
+      &#x27;■ 参加する方（学年・年代）\n　町内会の役員\n\n&#x27; +
+      &#x27;■ 参加予定人数\n　30人程度\n&#x27;,
+  };
+  MailApp.sendEmail({
+    to: me,
+    subject: &#x27;【テスト】受付しました：福祉教育・防災教育プログラムのお申し込み&#x27;,
+    body:
+      &#x27;大郷 太郎 様\n\nこのたびは、&#x27; + CONFIG.orgName + &#x27;の福祉教育・防災教育プログラムに\n&#x27; +
+      &#x27;お申し込みいただき、ありがとうございます。\n下記の内容で受け付けました。\n\n&#x27; +
+      &#x27;────────────────────\n&#x27; + dummy.text + &#x27;────────────────────\n\n&#x27; +
+      &#x27;【このあとの流れ】\n&#x27; +
+      &#x27;　1. 3日以内（土日祝を除く）に、担当者からお電話またはメールでご連絡します\n&#x27; +
+      &#x27;　2. 打ち合わせで、ねらい・プログラム・日時・会場を一緒に決めます\n&#x27; +
+      &#x27;　3. 実施計画書と進行表をお渡しし、当日に向けて準備を進めます\n\n&#x27; +
+      signature_(),
+    name: CONFIG.orgName,
+  });
+  Logger.log(&#x27;テストメールを &#x27; + me + &#x27; に送りました。&#x27;);
+}
+
+// フォームのURLとトリガーの状態を確認する
+function checkSetup() {
+  const triggers = ScriptApp.getProjectTriggers().filter(function (t) {
+    return t.getHandlerFunction() === &#x27;onFormSubmit&#x27;;
+  });
+  Logger.log(&#x27;自動返信トリガー：&#x27; + (triggers.length &gt; 0 ? &#x27;設定されています（&#x27; + triggers.length + &#x27;件）&#x27; : &#x27;設定されていません&#x27;));
+  Logger.log(&#x27;通知先メール：&#x27; + CONFIG.staffEmail);
+}
+</pre>
+</section>
+
+<section>
+  <h2>フォームで聞くこと</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>設問</th><th>形式</th><th>補足</th></tr></thead>
+    <tbody>
+      <tr><td>団体名・学校名 <span class="req">必須</span></td><td>記述</td><td>例：○○町内会、○○小学校</td></tr>
+      <tr><td>ご担当者のお名前 <span class="req">必須</span></td><td>記述</td><td>自動返信の宛名に使います</td></tr>
+      <tr><td>電話番号 <span class="req">必須</span></td><td>記述</td><td>日中つながる番号</td></tr>
+      <tr><td>メールアドレス <span class="req">必須</span></td><td>記述</td><td>ここに控えメールを送ります（形式チェックあり）</td></tr>
+      <tr><td>希望するプログラム <span class="req">必須</span></td><td>チェックボックス</td><td>10本＋「まだ決まっていない／相談したい」</td></tr>
+      <tr><td>いちばん伝えたいこと・ねらい</td><td>記述（長文）</td><td>空欄でも可</td></tr>
+      <tr><td>実施希望日（第1・第2希望）</td><td>日付</td><td>未定なら空欄</td></tr>
+      <tr><td>希望する時間帯</td><td>選択</td><td>午前／午後／夕方・夜間／未定</td></tr>
+      <tr><td>会場 <span class="req">必須</span></td><td>記述</td><td>未定でも可</td></tr>
+      <tr><td>参加する方（学年・年代） <span class="req">必須</span></td><td>記述</td><td>例：小学4年生</td></tr>
+      <tr><td>参加予定人数 <span class="req">必須</span></td><td>記述</td><td>およそで可</td></tr>
+      <tr><td>配慮が必要な方</td><td>記述（長文）</td><td>車いす・アレルギー・通訳など</td></tr>
+      <tr><td>その他ご質問・連絡事項</td><td>記述（長文）</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>自動で届くメール</h2>
+  <p class="note">申し込みボタンが押された直後に、2通が自動送信されます。</p>
+  <h3 style="margin-top:22px;font-size:16px">① 申込者への控え</h3>
+  <div class="mail"><strong>件名：【受付しました】福祉教育・防災教育プログラムのお申し込み</strong>
+
+大郷 太郎 様
+
+このたびは、社会福祉法人 大郷町社会福祉協議会の福祉教育・防災教育プログラムに
+お申し込みいただき、ありがとうございます。
+下記の内容で受け付けました。
+
+────────────────────
+■ 団体名・学校名
+　○○町内会
+■ 希望するプログラム
+　防災ビンゴゲーム、サバメシ作り
+　（以下、入力内容がそのまま入ります）
+────────────────────
+
+【このあとの流れ】
+　1. 3日以内（土日祝を除く）に、担当者からお電話またはメールでご連絡します
+　2. 打ち合わせで、ねらい・プログラム・日時・会場を一緒に決めます
+　3. 実施計画書と進行表をお渡しし、当日に向けて準備を進めます
+
+日程や内容が固まっていなくても大丈夫です。ご相談しながら進めます。
+
+━━━━━━━━━━━━━━━━━━━━
+「育てよう！地域のやさしい目」事業
+社会福祉法人 大郷町社会福祉協議会
+担当：金須・及川・千田
+TEL 022-359-2753　FAX 022-359-4896
+━━━━━━━━━━━━━━━━━━━━</div>
+
+  <h3 style="margin-top:26px;font-size:16px">② 社協への通知</h3>
+  <div class="mail"><strong>件名：【新規申込】○○町内会／大郷 太郎</strong>
+
+申込フォームに新しい回答が届きました。
+受付日時：2026年4月1日 10:30
+
+（入力内容がすべて入ります）
+
+申込者への自動返信は送信済みです（宛先：〜）。
+3日以内（土日祝を除く）のご連絡をお願いします。</div>
+  <p class="note" style="margin-top:14px">メールアドレスの記入がなかった場合は、自動返信を送らず、社協への通知にその旨が書かれます。</p>
+</section>
+
+<section>
+  <h2>困ったときは</h2>
+  <div class="qa">
+    <div><h3>自動返信が届かない</h3><p>迷惑メールフォルダをご確認ください。それでもなければ、Apps Scriptで <strong>checkSetup</strong> を実行して、トリガーが設定されているか確認します。</p></div>
+    <div><h3>文面を直したい</h3><p>コード内の <strong>onFormSubmit</strong> の中の文章を書き換えて保存すれば、次の申し込みから反映されます。</p></div>
+    <div><h3>通知先を変えたい</h3><p>コード先頭の <strong>staffEmail</strong> を書き換えて保存します。複数に送るときはご相談ください。</p></div>
+    <div><h3>1日に送れる数は？</h3><p>通常のGoogleアカウントで<strong>1日100通</strong>まで。申込1件につき2通使います（1日50件まで）。</p></div>
+    <div><h3>設問を増やしたい</h3><p>編集用URLからフォーム上で直接追加できます。追加した設問も、自動返信にそのまま載ります。</p></div>
+    <div><h3>createFormをもう一度押した</h3><p>フォームが新しくもう1つ作られます。古いほうをゴミ箱に入れ、配布用URLを新しいものに差し替えてください。</p></div>
+  </div>
+</section>
+
+<p class="foot">「育てよう！地域のやさしい目」事業　福祉教育・防災教育プログラム 申込フォーム設置ガイド<br>社会福祉法人 大郷町社会福祉協議会</p>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var code = document.getElementById('code').textContent;
+  var btn = this;
+  function done(ok) {
+    btn.textContent = ok ? 'コピーしました' : 'コピーできませんでした';
+    setTimeout(function () { btn.textContent = 'コードをコピー'; }, 2000);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(code).then(function () { done(true); }, function () { done(false); });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = code; document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta); done(ok);
+  }
+});
+</script>
