@@ -1,0 +1,1193 @@
+<title>大郷 福祉・防災プログラム案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+
+<style>
+/* ============================================================
+   大郷町社会福祉協議会 福祉教育・防災教育プログラム案内
+   写真の差し替え方：
+     <div class="photo">…</div> をまるごと
+     <img class="photo" src="写真のURLまたはファイル名" alt="説明">
+     に置き換えてください。
+   ============================================================ */
+
+:root{
+  --paper:#F5F7F1;
+  --card:#FFFFFF;
+  --card-2:#FBFCF8;
+  --ink:#22302A;
+  --ink-2:#5A6A61;
+  --ink-3:#86958C;
+  --line:#D9E0D4;
+  --line-2:#EBEFE7;
+  --fukushi:#2E7D5B;
+  --fukushi-bg:#E6F1EA;
+  --bosai:#C9581D;
+  --bosai-bg:#FAEADF;
+  --gold:#B8860B;
+  --gold-bg:#F7EFD7;
+  --shadow:0 1px 0 rgba(34,48,42,.06), 0 6px 18px -12px rgba(34,48,42,.35);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141A16;
+    --card:#1C231E;
+    --card-2:#212A24;
+    --ink:#E9F0E9;
+    --ink-2:#A9B7AE;
+    --ink-3:#7D8C83;
+    --line:#33403A;
+    --line-2:#2A342E;
+    --fukushi:#77C9A0;
+    --fukushi-bg:#1E3229;
+    --bosai:#F0965C;
+    --bosai-bg:#3A2519;
+    --gold:#E0B84F;
+    --gold-bg:#332A15;
+    --shadow:0 1px 0 rgba(0,0,0,.3), 0 6px 18px -12px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141A16;
+  --card:#1C231E;
+  --card-2:#212A24;
+  --ink:#E9F0E9;
+  --ink-2:#A9B7AE;
+  --ink-3:#7D8C83;
+  --line:#33403A;
+  --line-2:#2A342E;
+  --fukushi:#77C9A0;
+  --fukushi-bg:#1E3229;
+  --bosai:#F0965C;
+  --bosai-bg:#3A2519;
+  --gold:#E0B84F;
+  --gold-bg:#332A15;
+  --shadow:0 1px 0 rgba(0,0,0,.3), 0 6px 18px -12px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  font-size:16px;
+  line-height:1.85;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 96px}
+h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Zen Kaku Gothic New",sans-serif;text-wrap:balance;margin:0;line-height:1.4}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:2px}
+
+/* ---------- 表紙 ---------- */
+.cover{padding:44px 0 8px}
+.crest{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:13px;letter-spacing:.14em;font-weight:700;color:var(--fukushi);
+  border:1.5px solid var(--fukushi);padding:5px 13px;border-radius:2px;
+}
+.crest svg{width:17px;height:17px}
+h1{
+  font-size:clamp(30px,5.4vw,50px);font-weight:900;letter-spacing:.01em;
+  margin:22px 0 0;line-height:1.28;
+}
+h1 .accent{
+  background:linear-gradient(transparent 62%, var(--gold-bg) 62%);
+  padding:0 .1em;
+}
+.lede{
+  font-size:clamp(15px,2vw,17.5px);color:var(--ink-2);margin-top:18px;max-width:34em;
+}
+.cover-art{margin:26px 0 0;color:var(--fukushi)}
+.cover-art svg{width:100%;height:auto;display:block}
+
+.cover-facts{
+  display:flex;flex-wrap:wrap;gap:0;margin-top:26px;
+  border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line);
+}
+.cover-facts div{
+  flex:1 1 150px;padding:14px 16px 14px 0;
+}
+.cover-facts dt{font-size:11.5px;letter-spacing:.16em;color:var(--ink-3);font-weight:700;margin:0}
+.cover-facts dd{margin:3px 0 0;font-size:15px;font-weight:700;font-family:"Zen Maru Gothic",sans-serif}
+
+/* ---------- セクション ---------- */
+section{margin-top:64px}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.sec-eyebrow{
+  font-size:11.5px;font-weight:700;letter-spacing:.18em;color:var(--ink-3);
+}
+h2{font-size:clamp(22px,3.4vw,30px);font-weight:900}
+.sec-note{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:40em}
+.rule{height:1.5px;background:var(--ink);margin:14px 0 26px;border:0}
+
+/* ---------- 3つのポイント ---------- */
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.point{background:var(--card);padding:22px 20px}
+.point svg{width:38px;height:38px;color:var(--fukushi);display:block;margin-bottom:12px}
+.point h3{font-size:17px;font-weight:700;margin-bottom:6px}
+.point p{font-size:14px;color:var(--ink-2);line-height:1.8}
+
+/* ---------- プログラム一覧（目次） ---------- */
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.menu-col{border:1px solid var(--line);background:var(--card);padding:18px 20px 20px}
+.menu-col h3{font-size:15px;font-weight:700;letter-spacing:.04em;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.dot{width:11px;height:11px;border-radius:50%;flex:none}
+.menu-col ol{margin:0;padding-left:1.3em;font-size:14.5px;line-height:2.05}
+.menu-col li::marker{color:var(--ink-3);font-size:12px}
+.menu-col a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+.menu-col a:hover{border-bottom-color:currentColor}
+.tag-new{
+  font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--bosai);
+  border:1px solid var(--bosai);border-radius:2px;padding:0 4px;margin-left:6px;vertical-align:2px;
+}
+
+/* ---------- プログラムカード ---------- */
+.card{
+  scroll-margin-top:18px;
+  background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);
+  margin-top:22px;overflow:hidden;
+}
+.card-top{display:flex;gap:16px;align-items:flex-start;padding:22px 24px 18px;border-bottom:1px solid var(--line-2)}
+.badge{
+  width:62px;height:62px;flex:none;border-radius:50%;
+  display:grid;place-items:center;
+}
+.badge svg{width:38px;height:38px}
+.card-titles{flex:1;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:7px}
+.chip{
+  font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 8px;border-radius:2px;
+  background:var(--line-2);color:var(--ink-2);
+}
+h3.card-name{font-size:clamp(19px,2.6vw,24px);font-weight:900;letter-spacing:.01em}
+.catch{font-size:15px;font-weight:500;margin-top:7px;color:var(--ink-2)}
+.card-body{display:grid;grid-template-columns:1.55fr 1fr;gap:0}
+.card-main{padding:20px 24px 24px;display:flex;flex-direction:column;gap:16px}
+.card-side{padding:20px 24px 24px;border-left:1px solid var(--line-2);background:var(--card-2);display:flex;flex-direction:column;gap:16px}
+@media (max-width:720px){
+  .card-body{grid-template-columns:1fr}
+  .card-side{border-left:0;border-top:1px solid var(--line-2)}
+}
+.block h4{
+  font-size:11.5px;font-weight:700;letter-spacing:.16em;color:var(--ink-3);margin-bottom:6px;
+}
+.block p{font-size:15px;line-height:1.9}
+.aim{
+  border-left:3px solid currentColor;padding-left:14px;
+}
+.aim p{color:var(--ink)}
+dl.meta{margin:0;display:grid;grid-template-columns:5.2em 1fr;gap:7px 10px;font-size:13.5px}
+dl.meta dt{color:var(--ink-3);font-weight:700}
+dl.meta dd{margin:0;font-feature-settings:"palt";font-variant-numeric:tabular-nums}
+
+/* 所要時間バー（0〜180分の共通目盛り） */
+.timebar{margin-top:2px}
+.timebar-track{height:9px;background:var(--line-2);position:relative;border-radius:1px;overflow:hidden}
+.timebar-fill{position:absolute;top:0;bottom:0;background:currentColor;opacity:.85}
+.timebar-scale{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-3);margin-top:4px;font-variant-numeric:tabular-nums}
+
+/* 写真スロット */
+.card-photo{grid-column:1/-1;border-top:1px solid var(--line-2);padding:18px 24px 22px}
+.photo{
+  display:grid;place-items:center;gap:8px;
+  aspect-ratio:16/5;min-height:148px;max-height:260px;width:100%;
+  border:1.5px dashed var(--line);background:var(--card-2);
+  color:var(--ink-3);text-align:center;padding:12px;
+  font-size:12.5px;line-height:1.6;
+}
+img.photo{display:block;object-fit:cover;border-style:solid;padding:0}
+.photo svg{width:30px;height:30px;opacity:.65}
+
+/* ---------- 組み合わせ ---------- */
+.plans{display:grid;gap:20px}
+.plan{border:1px solid var(--line);background:var(--card);padding:20px 22px 22px}
+.plan-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line-2);padding-bottom:12px;margin-bottom:14px}
+.plan-mark{
+  font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:22px;color:var(--gold);
+  line-height:1;
+}
+.plan h3{font-size:19px;font-weight:900;flex:1;min-width:0}
+.plan-time{font-size:12.5px;font-weight:700;color:var(--ink-2);letter-spacing:.06em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px}
+.chain span.item{
+  font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:14.5px;
+  padding:6px 12px;border-radius:2px;
+}
+.chain span.plus{color:var(--ink-3);font-weight:700}
+.plan p{font-size:14.5px;color:var(--ink-2)}
+.plan p strong{color:var(--ink)}
+
+/* ---------- 流れ ---------- */
+.flow{display:grid;gap:0;margin-top:8px}
+.step{
+  display:grid;grid-template-columns:7.5em 1fr;gap:20px;
+  padding:22px 0;border-top:1px solid var(--line);position:relative;
+}
+.step:last-child{border-bottom:1px solid var(--line)}
+.when{
+  font-size:12.5px;font-weight:700;color:var(--ink-3);letter-spacing:.08em;
+  font-variant-numeric:tabular-nums;padding-top:5px;
+}
+.step-body{display:flex;gap:16px;align-items:flex-start}
+.step-no{
+  width:34px;height:34px;flex:none;border-radius:50%;background:var(--fukushi);color:var(--paper);
+  display:grid;place-items:center;font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:16px;
+}
+.step h3{font-size:18px;font-weight:900;margin-bottom:5px}
+.step p{font-size:14.5px;color:var(--ink-2)}
+.step .todo{
+  margin-top:9px;font-size:13.5px;background:var(--fukushi-bg);color:var(--ink);
+  padding:9px 13px;border-radius:2px;display:inline-block;
+}
+@media (max-width:640px){
+  .step{grid-template-columns:1fr;gap:8px}
+}
+
+/* ---------- Q&A ---------- */
+.qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.qa-item{background:var(--card);padding:18px 20px}
+.qa-item h3{font-size:15.5px;font-weight:700;margin-bottom:7px;display:flex;gap:9px}
+.qa-item h3::before{content:"Q";font-weight:900;color:var(--gold);font-size:16px}
+.qa-item p{font-size:14px;color:var(--ink-2);padding-left:22px}
+
+/* ---------- 申込み ---------- */
+.contact{border:2.5px solid var(--ink);padding:26px 26px 28px;background:var(--card)}
+.contact h2{font-size:24px;margin-bottom:6px}
+.contact .lead{font-size:15px;color:var(--ink-2);margin-bottom:20px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px 26px}
+.field{border-bottom:1.5px dotted var(--line);padding-bottom:6px}
+.field span{display:block;font-size:11.5px;letter-spacing:.14em;color:var(--ink-3);font-weight:700;margin-bottom:12px}
+.fill-note{
+  margin-top:20px;font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line-2);padding-top:14px;
+}
+
+.footnote{margin-top:26px;font-size:12.5px;color:var(--ink-3);line-height:1.9}
+
+/* ---------- 印刷 ---------- */
+@media print{
+  :root{--paper:#fff;--card:#fff;--card-2:#fff;--ink:#000;--ink-2:#333;--ink-3:#666;--line:#bbb;--line-2:#ddd;--shadow:none}
+  body{font-size:10.5pt;line-height:1.7}
+  .wrap{max-width:none;padding:0}
+  section{margin-top:26px;page-break-inside:avoid}
+  .card,.plan,.qa,.contact,.step{page-break-inside:avoid}
+  .cover{padding-top:0}
+  a{text-decoration:none}
+}
+</style>
+
+<div class="wrap">
+
+<!-- ============ 表紙 ============ -->
+<header class="cover">
+  <span class="crest">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 20.5c-3.6-2.6-7.5-5.4-7.5-9.4A4.1 4.1 0 0 1 12 8.6a4.1 4.1 0 0 1 7.5 2.5c0 4-3.9 6.8-7.5 9.4Z"/>
+      <path d="M12 8.6V3.5M9.4 5.3 12 3.5l2.6 1.8"/>
+    </svg>
+    大郷町社会福祉協議会
+  </span>
+
+  <h1>ふくし体験と防災を、<br><span class="accent">地域のみなさんと</span>いっしょに。</h1>
+
+  <p class="lede">
+    町内会・自治会、学校、子ども会、サークル、事業所——「うちでもやってみたい」に、社協がまるごと伴走します。
+    講師も資機材もこちらで用意。会場と参加者だけ、そろえてください。
+  </p>
+
+  <div class="cover-art" aria-hidden="true">
+    <svg viewBox="0 0 900 176" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <!-- 背景の家並み -->
+      <g opacity=".3" stroke-width="2">
+        <path d="M78 150v-30l22-17 22 17v30M78 128h44"/>
+        <path d="M404 150v-38l30-22 30 22v38M404 122h60M424 150v-20h20v20"/>
+        <path d="M742 150v-28l20-16 20 16v28M742 132h40"/>
+      </g>
+      <!-- 地面 -->
+      <path d="M0 150h900" stroke-width="2.6"/>
+      <path d="M148 158h34M330 160h40M612 158h30M812 160h36" opacity=".45"/>
+
+      <!-- 1. 手をふる子ども -->
+      <g>
+        <circle cx="62" cy="84" r="10"/>
+        <path d="M62 94v24"/>
+        <path d="M62 100 47 110M62 100l14-12"/>
+        <path d="M53 150l9-32 9 32"/>
+      </g>
+      <!-- 2. 車いすの人 -->
+      <g>
+        <circle cx="182" cy="80" r="10"/>
+        <path d="M182 90v20h-22"/>
+        <path d="M182 98l16 8"/>
+        <path d="M160 110v24"/>
+        <circle cx="177" cy="134" r="16"/>
+        <circle cx="150" cy="143" r="7"/>
+        <path d="M160 118h26"/>
+      </g>
+      <!-- 3. 白杖の人 -->
+      <g>
+        <circle cx="290" cy="78" r="10"/>
+        <path d="M290 88v30M290 96l-14 10M290 96l15 8"/>
+        <path d="M281 150l9-32 9 32"/>
+        <path d="M305 104l16 46" stroke-dasharray="5 5"/>
+      </g>
+      <!-- 4. 杖の高齢者 -->
+      <g>
+        <circle cx="352" cy="82" r="10"/>
+        <path d="M352 92c-2 10-4 16-4 26M348 100l-13 8M348 100l14 6"/>
+        <path d="M341 150l7-32 11 32"/>
+        <path d="M362 106v44M362 106q7 0 7 6"/>
+      </g>
+      <!-- 5. 鍋を持つ人（サバメシ） -->
+      <g>
+        <circle cx="480" cy="80" r="10"/>
+        <path d="M480 90v26M480 98l-16 10M480 98l16 10"/>
+        <path d="M471 150l9-34 9 34"/>
+        <path d="M462 116h36l-4 14h-28z"/>
+        <path d="M458 116h44"/>
+        <path d="M474 108q3-6 6 0" opacity=".6"/>
+      </g>
+      <!-- 6. テント（避難所） -->
+      <g>
+        <path d="M540 150l32-52 32 52z"/>
+        <path d="M572 98v52M562 150l10-22 10 22"/>
+      </g>
+      <!-- 7. 地図をひろげる二人 -->
+      <g>
+        <circle cx="660" cy="80" r="10"/>
+        <path d="M660 90v24M660 100l14 10"/>
+        <path d="M652 150l8-36 10 36"/>
+        <circle cx="716" cy="80" r="10"/>
+        <path d="M716 90v24M716 100l-14 10"/>
+        <path d="M708 150l8-36 10 36"/>
+        <path d="M674 110h28v22h-28z"/>
+        <path d="M681 118l5 6 8-8" opacity=".7"/>
+      </g>
+      <!-- 8. 手をつなぐ二人 -->
+      <g>
+        <circle cx="822" cy="82" r="10"/>
+        <path d="M822 92v24M822 100l-14 8M822 100l16 10"/>
+        <path d="M813 150l9-34 9 34"/>
+        <circle cx="872" cy="82" r="10"/>
+        <path d="M872 92v24M872 100l-16 10M872 100l14 8"/>
+        <path d="M863 150l9-34 9 34"/>
+      </g>
+    </svg>
+  </div>
+
+  <dl class="cover-facts">
+    <div><dt>プログラム数</dt><dd>ふくし体験 5 ／ 防災 5</dd></div>
+    <div><dt>対象</dt><dd>小学生から大人まで</dd></div>
+    <div><dt>所要時間</dt><dd>45分 〜 1泊2日</dd></div>
+    <div><dt>組み合わせ</dt><dd>自由に選べます</dd></div>
+  </dl>
+</header>
+
+<!-- ============ 3つのポイント ============ -->
+<section>
+  <div class="sec-head">
+    <span class="sec-eyebrow">はじめに</span>
+    <h2>社協の福祉教育、3つの約束</h2>
+  </div>
+  <hr class="rule">
+  <div class="points">
+    <div class="point">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M24 42S8 32 8 20a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 12-16 22-16 22Z"/>
+        <path d="M17 22h5l2-5 3 9 2-4h4"/>
+      </svg>
+      <h3>「聞く」より「やってみる」</h3>
+      <p>講義だけで終わりません。体を動かし、困り、気づく時間をかならず入れます。だから記憶に残ります。</p>
+    </div>
+    <div class="point">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 40v-4a8 8 0 0 1 8-8h6a8 8 0 0 1 8 8v4"/>
+        <circle cx="17" cy="16" r="7"/>
+        <path d="M30 28h4a8 8 0 0 1 8 8v4"/>
+        <path d="M33 10a7 7 0 0 1 0 13"/>
+      </svg>
+      <h3>準備から当日まで一緒に</h3>
+      <p>ねらいの整理、進行表づくり、協力者への声かけ、保険の手配まで。初めての担当者さんでも大丈夫です。</p>
+    </div>
+    <div class="point">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M8 12h32v24H8z"/>
+        <path d="M8 20h32"/>
+        <path d="M15 28h8M15 33h14"/>
+        <path d="M16 12V7M32 12V7"/>
+      </svg>
+      <h3>一回で終わらせない</h3>
+      <p>ふりかえりまでがプログラム。出てきた「気になること」を、次の活動や地域の見守りにつなげます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ プログラム一覧 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="sec-eyebrow">プログラム一覧</span>
+    <h2>10のメニューから、自由に組み合わせ</h2>
+  </div>
+  <hr class="rule">
+  <p class="sec-note">
+    単独でも、2〜3本をつないで半日・一日のプログラムにもできます。時間・人数・会場に合わせて調整しますので、まずは「やってみたいもの」に印をつけてご相談ください。
+  </p>
+  <div class="menu" style="margin-top:22px">
+    <div class="menu-col">
+      <h3><span class="dot" style="background:var(--fukushi)"></span>ふくし体験プログラム</h3>
+      <ol>
+        <li><a href="#p1">車いす体験</a></li>
+        <li><a href="#p2">白杖体験（アイマスク体験）</a></li>
+        <li><a href="#p3">高齢者疑似体験講座</a></li>
+        <li><a href="#p4">災害ボランティアセンター運営体験</a></li>
+        <li><a href="#p5">認知症サポーター養成講座</a></li>
+      </ol>
+    </div>
+    <div class="menu-col">
+      <h3><span class="dot" style="background:var(--bosai)"></span>防災プログラム<span class="tag-new">新設</span></h3>
+      <ol>
+        <li><a href="#p6">防災ビンゴゲーム</a></li>
+        <li><a href="#p7">避難所体験</a></li>
+        <li><a href="#p8">助けられ上手・助け上手になろう！</a></li>
+        <li><a href="#p9">サバメシ作り</a></li>
+        <li><a href="#p10">防災福祉マップづくり</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ふくし体験プログラム ============ -->
+<section>
+  <div class="sec-head">
+    <span class="sec-eyebrow">PROGRAM ／ ふくし体験</span>
+    <h2>いま実施している 5つのプログラム</h2>
+  </div>
+  <hr class="rule">
+  <p class="sec-note">大郷町社協が長く続けてきた、定番の福祉教育プログラムです。学校の総合学習でも、地域の集まりでも実施できます。</p>
+
+  <!-- ① 車いす体験 -->
+  <article class="card" id="p1">
+    <div class="card-top">
+      <div class="badge" style="background:var(--fukushi-bg);color:var(--fukushi)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="36" cy="10" r="5.5"/><path d="M36 18v13h11"/><path d="M47 31l4 11"/><path d="M36 24h12"/>
+          <circle cx="30" cy="42" r="14"/><circle cx="30" cy="42" r="3"/><path d="M45 55h10"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip">ふくし体験</span><span class="chip">体を動かす</span><span class="chip">屋内・屋外</span></div>
+        <h3 class="card-name">車いす体験</h3>
+        <p class="catch">「押す人」も「乗る人」も、両方やってみる。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>車いすの開き方・たたみ方から始めて、平らな道 → 段差 → スロープ → 砂利道と、少しずつ難しくなるコースを進みます。乗る役と押す役を必ず交代。最後に「怖かった場面」と「うれしかった声かけ」を出し合って共有します。</p>
+        </div>
+        <div class="block aim" style="color:var(--fukushi)">
+          <h4>ねらい</h4>
+          <p>車いすを使う人の目線の高さと不安を、体で知る。段差・すき間・傾きなど、ふだん見えていないまちのバリアに気づく目を持ち、「押しましょうか？」の一言を言えるようにする。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学4年生〜大人</dd>
+          <dt>人数</dt><dd>10〜40人（4〜6人の班に分けます）</dd>
+          <dt>所要</dt><dd>60〜90分</dd>
+          <dt>会場</dt><dd>体育館・多目的ホール（段差やスロープのある屋外もあると◎）</dd>
+          <dt>用意</dt><dd>動きやすい服装／車いす・コーンは社協が貸出</dd>
+        </dl>
+        <div class="timebar" style="color:var(--fukushi)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:33.3%;width:16.7%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：段差をこえる練習のようす</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ② 白杖体験 -->
+  <article class="card" id="p2">
+    <div class="card-top">
+      <div class="badge" style="background:var(--fukushi-bg);color:var(--fukushi)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="24" cy="12" r="6"/><path d="M17 12h14"/><path d="M24 21v16"/><path d="M24 26l-8 6M24 26l11 5"/>
+          <path d="M16 55l8-18 8 18"/><path d="M35 31l14 24"/><path d="M44 55h12" opacity=".5"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip">ふくし体験</span><span class="chip">2人1組</span><span class="chip">屋内</span></div>
+        <h3 class="card-name">白杖体験（アイマスク体験）</h3>
+        <p class="catch">目を閉じた3分間で、まちの音が変わる。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>2人1組で、アイマスクと白杖で歩く役と、となりで支える「ガイドヘルプ」役を交代します。廊下を歩く、階段を上り下りする、自動販売機で飲み物を買う——短い課題を用意。「あぶない！」ではなく「3歩先に下り階段があります」と伝える練習までを行います。</p>
+        </div>
+        <div class="block aim" style="color:var(--fukushi)">
+          <h4>ねらい</h4>
+          <p>見えない・見えにくい人の心細さと、伝わる声かけ／伝わらない声かけの違いを知る。手を引くのではなく「腕を貸す」介助の基本を身につける。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学4年生〜大人</dd>
+          <dt>人数</dt><dd>10〜30人（偶数だとスムーズ）</dd>
+          <dt>所要</dt><dd>60〜90分</dd>
+          <dt>会場</dt><dd>廊下・階段が使える学校や施設</dd>
+          <dt>用意</dt><dd>会場の通路確保／アイマスク・白杖は社協が貸出</dd>
+        </dl>
+        <div class="timebar" style="color:var(--fukushi)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:33.3%;width:16.7%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：ガイドヘルプで階段を歩くようす</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ③ 高齢者疑似体験 -->
+  <article class="card" id="p3">
+    <div class="card-top">
+      <div class="badge" style="background:var(--fukushi-bg);color:var(--fukushi)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="24" cy="13" r="6"/><path d="M17 13h14"/><path d="M24 22c-1 8-3 11-3 17"/><path d="M21 29l-8 5M21 29l11 4"/>
+          <path d="M13 56l8-17 8 17"/><path d="M33 34v22M33 34q7 0 7 6"/><rect x="9" y="31" width="9" height="7" rx="1.5"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip">ふくし体験</span><span class="chip">装具を装着</span><span class="chip">屋内</span></div>
+        <h3 class="card-name">高齢者疑似体験講座</h3>
+        <p class="catch">30分だけ、80歳になってみる。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>手足の重り、関節を曲がりにくくするサポーター、視界がぼやける特殊ゴーグル、感覚が鈍る手袋を装着。その状態で、階段の上り下り、財布から小銭を出す、新聞の細かい字を読む、ペットボトルのふたを開ける——ふだん何気なくしている動作をやってみます。</p>
+        </div>
+        <div class="block aim" style="color:var(--fukushi)">
+          <h4>ねらい</h4>
+          <p>「歳をとると、なぜゆっくりになるのか」を身体で理解する。急かさない・待つ・声をかけるという関わり方を、家族や近所づきあいの中に持ち帰ってもらう。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学5年生〜大人</dd>
+          <dt>人数</dt><dd>10〜30人（装具の数により調整）</dd>
+          <dt>所要</dt><dd>約90分</dd>
+          <dt>会場</dt><dd>教室・和室・集会所（階段が近くにあると◎）</dd>
+          <dt>用意</dt><dd>疑似体験セットは社協が貸出／着脱しやすい服装</dd>
+        </dl>
+        <div class="timebar" style="color:var(--fukushi)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:44.4%;width:11.2%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：装具をつけて階段を上るようす</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ④ 災害ボランティアセンター運営体験 -->
+  <article class="card" id="p4">
+    <div class="card-top">
+      <div class="badge" style="background:var(--fukushi-bg);color:var(--fukushi)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 42h52"/><path d="M14 42v13M50 42v13"/><rect x="19" y="10" width="22" height="26" rx="2"/>
+          <path d="M26 8h8v5h-8z"/><path d="M25 21h11M25 28h7"/><path d="M47 20l7 6-7 6"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip">ふくし体験</span><span class="chip">防災にも</span><span class="chip">役割分担</span></div>
+        <h3 class="card-name">災害ボランティアセンター運営体験</h3>
+        <p class="catch">「手伝いたい人」と「困っている人」をつなぐ現場を、まるごと。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>受付班・オリエンテーション班・ニーズ班・マッチング班・資機材班に分かれ、模擬のニーズ票（「床下の泥出しをお願いしたい」など）とボランティア役を使って、センターを1サイクル動かしてみます。最後は各班からの「困ったこと」を出し合う運営会議まで。</p>
+        </div>
+        <div class="block aim" style="color:var(--fukushi)">
+          <h4>ねらい</h4>
+          <p>災害時に社協が立ち上げるボランティアセンターの仕組みを知る。「その日、誰が動かすのか」を自分ごとにして、地域から運営スタッフになれる人を増やす。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>中学生〜大人（自主防災組織・行政職員にも）</dd>
+          <dt>人数</dt><dd>15〜50人</dd>
+          <dt>所要</dt><dd>120〜180分</dd>
+          <dt>会場</dt><dd>体育館・多目的ホール（机といすが並べられる広さ）</dd>
+          <dt>用意</dt><dd>机・いす・受付スペース／様式類は社協が用意</dd>
+        </dl>
+        <div class="timebar" style="color:var(--fukushi)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:66.7%;width:33.3%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：受付・マッチングのようす</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ⑤ 認知症サポーター養成講座 -->
+  <article class="card" id="p5">
+    <div class="card-top">
+      <div class="badge" style="background:var(--fukushi-bg);color:var(--fukushi)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="19" cy="15" r="7"/><path d="M8 42v-5a11 11 0 0 1 22 0v5"/>
+          <circle cx="41" cy="18" r="6"/><path d="M34 40v-3a9 9 0 0 1 14-1"/>
+          <circle cx="45" cy="48" r="9"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip">ふくし体験</span><span class="chip">講義＋寸劇</span><span class="chip">大人数OK</span></div>
+        <h3 class="card-name">認知症サポーター養成講座</h3>
+        <p class="catch">認知症を「知っている人」が、まちの安心になる。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>キャラバン・メイトが伺い、映像や寸劇で認知症の症状と、その人が感じている世界を紹介します。「もし、同じ話をくり返す人に出会ったら」「道に迷っている様子の人がいたら」を全員で考える時間つき。受講された方には認知症サポーターの目印（オレンジのカード・リング）をお渡しします。</p>
+        </div>
+        <div class="block aim" style="color:var(--fukushi)">
+          <h4>ねらい</h4>
+          <p>正しい知識で「怖い・わからない」を減らす。認知症のある人とその家族を、責めずに見守り、さりげなく支える応援者を地域に増やす。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学生〜大人（学校・職場・サロンでも）</dd>
+          <dt>人数</dt><dd>10〜100人</dd>
+          <dt>所要</dt><dd>約90分</dd>
+          <dt>会場</dt><dd>集会所・教室・会議室（映像が映せると◎）</dd>
+          <dt>用意</dt><dd>プロジェクター等（ご相談ください）</dd>
+        </dl>
+        <div class="timebar" style="color:var(--fukushi)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:44.4%;width:11.2%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：講座のようす／オレンジリング</span>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ 防災プログラム ============ -->
+<section>
+  <div class="sec-head">
+    <span class="sec-eyebrow" style="color:var(--bosai)">PROGRAM ／ 防災</span>
+    <h2>これから増やしていく 5つのプログラム</h2>
+  </div>
+  <hr class="rule" style="background:var(--bosai)">
+  <p class="sec-note">
+    「防災は大事、でも何から始めれば？」という声にこたえる、体験型のメニューです。<strong>災害で最初に困るのは、高齢者・障がいのある人・子ども・外国から来た人</strong>——だから社協は、防災を「福祉の目線」でお伝えします。楽しく始めて、地域の助け合いにつなげましょう。
+  </p>
+
+  <!-- ⑥ 防災ビンゴゲーム -->
+  <article class="card" id="p6">
+    <div class="card-top">
+      <div class="badge" style="background:var(--bosai-bg);color:var(--bosai)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="12" width="46" height="40" rx="2"/><path d="M9 25h46M9 39h46M24 12v40M40 12v40"/>
+          <circle cx="16.5" cy="18.5" r="3.6"/><circle cx="32" cy="32" r="3.6"/><circle cx="47.5" cy="45.5" r="3.6"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips" ><span class="chip" style="background:var(--bosai-bg);color:var(--bosai)">防災</span><span class="chip">ゲーム</span><span class="chip">親子・世代間交流</span></div>
+        <h3 class="card-name">防災ビンゴゲーム</h3>
+        <p class="catch">遊んでいるうちに、家の備えが見えてくる。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>「懐中電灯」「乾電池」「常備薬」「現金」「おくすり手帳」など、非常持ち出し袋に入れたいものが並んだビンゴカードで対戦。読み上げるたびに「なぜ必要か」「何日分いるか」をひと言ずつ解説します。仕上げは、わが家に足りないものを書き出す<strong>「備えメモ」</strong>づくり。</p>
+        </div>
+        <div class="block aim" style="color:var(--bosai)">
+          <h4>ねらい</h4>
+          <p>むずかしい話をせずに、幅広い年齢が一緒に参加できる入り口をつくる。「備えなきゃ」で終わらせず、その日のうちに家庭の行動リストへ変える。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>年長〜大人（親子・三世代におすすめ）</dd>
+          <dt>人数</dt><dd>10〜60人</dd>
+          <dt>所要</dt><dd>45〜60分</dd>
+          <dt>会場</dt><dd>集会所・多目的室（机があると◎）</dd>
+          <dt>用意</dt><dd>カード・景品は社協が用意／筆記用具</dd>
+        </dl>
+        <div class="timebar" style="color:var(--bosai)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:25%;width:8.3%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：ビンゴで盛り上がるようす</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ⑦ 避難所体験 -->
+  <article class="card" id="p7">
+    <div class="card-top">
+      <div class="badge" style="background:var(--bosai-bg);color:var(--bosai)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 27L32 8l27 19"/><path d="M11 27v28h42V27"/>
+          <rect x="17" y="36" width="12" height="11" rx="1.5"/><rect x="35" y="36" width="12" height="11" rx="1.5"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip" style="background:var(--bosai-bg);color:var(--bosai)">防災</span><span class="chip">半日 or 宿泊</span><span class="chip">地域まるごと</span></div>
+        <h3 class="card-name">避難所体験</h3>
+        <p class="catch">一晩過ごしてみると、足りないものがわかる。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>受付名簿づくり → 間仕切り・段ボールベッドの組み立て → 簡易トイレの設置 → 非常食の配給 → 消灯までの過ごし方。半日コースと宿泊コースが選べます。高齢者・車いすの人・乳幼児連れ・外国から来た人などの<strong>「配慮が必要な役」</strong>を置くと、学びが一気に深まります。</p>
+        </div>
+        <div class="block aim" style="color:var(--bosai)">
+          <h4>ねらい</h4>
+          <p>避難所は「行けば誰かが用意してくれる場所」ではなく「集まった人で運営する場所」だと、体験で理解する。誰が困るのかを先に知り、地域の避難所運営マニュアルづくりにつなげる。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学生〜大人（家族・町内会単位で）</dd>
+          <dt>人数</dt><dd>20〜80人</dd>
+          <dt>所要</dt><dd>120分〜／1泊コースあり</dd>
+          <dt>会場</dt><dd>体育館・公民館（宿泊は要事前調整）</dd>
+          <dt>用意</dt><dd>寝具（宿泊時）／間仕切り・段ボールベッド等は社協が手配</dd>
+        </dl>
+        <div class="timebar" style="color:var(--bosai)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:66.7%;width:33.3%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：段ボールベッド・間仕切りづくり</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ⑧ 助けられ上手・助け上手 -->
+  <article class="card" id="p8">
+    <div class="card-top">
+      <div class="badge" style="background:var(--bosai-bg);color:var(--bosai)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="15" cy="15" r="6.5"/><path d="M15 23v14M15 27l-7 7M15 27l10-8"/><path d="M8 55l7-18 7 18"/>
+          <circle cx="49" cy="18" r="6.5"/><path d="M49 26v12M49 30l-12-3M49 30l7 6"/><path d="M42 55l7-17 7 17"/>
+          <path d="M28 21l4-3M33 26h4" opacity=".65"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip" style="background:var(--bosai-bg);color:var(--bosai)">防災</span><span class="chip">ロールプレイ</span><span class="chip">話し合い</span></div>
+        <h3 class="card-name">助けられ上手・助け上手になろう！</h3>
+        <p class="catch">その「大丈夫です」を、やめてみる。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>「困っていることを伝える練習」と「手伝いを申し出る練習」を、役を交代しながらロールプレイ。停電した／断水した／薬が切れた／段差が越えられない——場面カードを引いて、<strong>誰に・どう頼むか</strong>を実際に声に出します。最後に「わたしの助けてほしいことリスト」と「わたしにできることリスト」を交換します。</p>
+        </div>
+        <div class="block aim" style="color:var(--bosai)">
+          <h4>ねらい</h4>
+          <p>支援は一方通行ではないと知る。日ごろから「頼める関係」をつくっておくことが、災害時の逃げ遅れを防ぐ——遠慮が命に関わることを、無理なく実感してもらう。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学生〜大人（サロン・PTAにも）</dd>
+          <dt>人数</dt><dd>10〜40人</dd>
+          <dt>所要</dt><dd>60〜90分</dd>
+          <dt>会場</dt><dd>集会所・教室（グループで座れる配置）</dd>
+          <dt>用意</dt><dd>場面カード・ワークシートは社協が用意</dd>
+        </dl>
+        <div class="timebar" style="color:var(--bosai)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:33.3%;width:16.7%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：グループで話し合うようす</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ⑨ サバメシ作り -->
+  <article class="card" id="p9">
+    <div class="card-top">
+      <div class="badge" style="background:var(--bosai-bg);color:var(--bosai)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M13 30h38v11a10 10 0 0 1-10 10H23a10 10 0 0 1-10-10z"/><path d="M7 30h50"/>
+          <path d="M24 23c0-4 6-5 6-9M38 23c0-4 5-5 5-9"/><path d="M18 57h28"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip" style="background:var(--bosai-bg);color:var(--bosai)">防災</span><span class="chip">調理</span><span class="chip">親子向け</span></div>
+        <h3 class="card-name">サバメシ作り</h3>
+        <p class="catch">電気もガスも止まった日の、あたたかいごはん。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>耐熱ポリ袋と少しの水でごはんを炊く<strong>「ポリ袋炊飯」</strong>が主役。カセットコンロと大鍋で全員分をまとめて調理します。缶詰・乾物を使ったおかずも一緒に作って試食。水を節約する洗い物の工夫、アレルギーのある人への配慮もあわせてお伝えします。</p>
+        </div>
+        <div class="block aim" style="color:var(--bosai)">
+          <h4>ねらい</h4>
+          <p>「非常食＝かたい乾パン」のイメージを変える。ライフラインが止まっても食べられる、という自信をひとつ持ち帰ってもらう。あたたかい食事は、避難生活で心を支えることも伝えます。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学生〜大人（低学年は保護者と一緒に）</dd>
+          <dt>人数</dt><dd>10〜40人</dd>
+          <dt>所要</dt><dd>90〜120分</dd>
+          <dt>会場</dt><dd>調理室・かまど・屋外（火気の使える場所）</dd>
+          <dt>用意</dt><dd>エプロン・三角巾／材料費は実費のご負担をお願いする場合があります</dd>
+        </dl>
+        <div class="timebar" style="color:var(--bosai)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:50%;width:16.7%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：ポリ袋炊飯のごはん／調理のようす</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ⑩ 防災福祉マップづくり -->
+  <article class="card" id="p10">
+    <div class="card-top">
+      <div class="badge" style="background:var(--bosai-bg);color:var(--bosai)">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 17l15-6 20 6 15-6v39l-15 6-20-6-15 6z"/><path d="M22 11v39M42 17v39"/>
+          <path d="M37 26a5.5 5.5 0 1 0-11 0c0 4.5 5.5 10 5.5 10s5.5-5.5 5.5-10z"/>
+        </svg>
+      </div>
+      <div class="card-titles">
+        <div class="chips"><span class="chip" style="background:var(--bosai-bg);color:var(--bosai)">防災</span><span class="chip">まち歩き</span><span class="chip">町内会におすすめ</span></div>
+        <h3 class="card-name">防災福祉マップづくり</h3>
+        <p class="catch">歩いてみないと、地図には載らない。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-main">
+        <div class="block">
+          <h4>どんな内容？</h4>
+          <p>数人の班に分かれてまちを歩き、<strong>危ないところ</strong>（古いブロック塀・冠水しやすい道・街灯のない夜道）と<strong>助けになるところ</strong>（AED・井戸・公衆電話・広い駐車場・逃げ込める建物）を写真とメモで集めます。集会所に戻ったら大きな白地図に貼り、避難経路と「声をかけに行くお宅」を書き込んで、班ごとに発表します。</p>
+        </div>
+        <div class="block aim" style="color:var(--bosai)">
+          <h4>ねらい</h4>
+          <p>地域の弱いところと強いところを、住民自身の目で見つける。できあがった地図を、避難行動要支援者の見守りや、次の訓練の計画づくりにそのまま使う。</p>
+        </div>
+      </div>
+      <div class="card-side">
+        <dl class="meta">
+          <dt>対象</dt><dd>小学5年生〜大人（町内会・自主防災組織に最適）</dd>
+          <dt>人数</dt><dd>10〜40人</dd>
+          <dt>所要</dt><dd>120〜150分（まち歩き60分＋作業60分）</dd>
+          <dt>会場</dt><dd>集会所＋その周辺のまち</dd>
+          <dt>用意</dt><dd>歩きやすい靴・帽子／地図・模造紙・カメラは社協が用意</dd>
+        </dl>
+        <div class="timebar" style="color:var(--bosai)">
+          <div class="timebar-track"><div class="timebar-fill" style="left:66.7%;width:16.7%"></div></div>
+          <div class="timebar-scale"><span>0</span><span>60分</span><span>120分</span><span>180分〜</span></div>
+        </div>
+      </div>
+      <div class="card-photo">
+        <!-- 写真差し替え：この div を <img class="photo" src="..." alt="..."> に置き換え -->
+        <div class="photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l1.5-2.5h7L17 8h4v12H3z"/><circle cx="12" cy="13.5" r="3.8"/></svg>
+          <span>写真：まち歩き／完成した地図の発表</span>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ 組み合わせ例 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="sec-eyebrow">組み合わせ例</span>
+    <h2>つなげると、学びが深くなります</h2>
+  </div>
+  <hr class="rule">
+  <p class="sec-note">下は、よくお申し込みいただく組み合わせの例です。もちろん1本だけでもOK。時間や参加者に合わせて、いくらでも組み替えられます。</p>
+
+  <div class="plans" style="margin-top:22px">
+    <div class="plan">
+      <div class="plan-head">
+        <span class="plan-mark">A</span>
+        <h3>学校のふくし体験学習</h3>
+        <span class="plan-time">1日（4時間程度）／小学校・中学校</span>
+      </div>
+      <div class="chain">
+        <span class="item" style="background:var(--fukushi-bg);color:var(--fukushi)">車いす体験</span><span class="plus">＋</span>
+        <span class="item" style="background:var(--fukushi-bg);color:var(--fukushi)">白杖体験</span><span class="plus">＋</span>
+        <span class="item" style="background:var(--bosai-bg);color:var(--bosai)">助けられ上手・助け上手</span>
+      </div>
+      <p><strong>気づく → やってみる → 言葉にする</strong>の順に並べた王道コース。体験だけで終わらせず、最後に「声のかけ方」を練習して教室に持ち帰ります。</p>
+    </div>
+
+    <div class="plan">
+      <div class="plan-head">
+        <span class="plan-mark">B</span>
+        <h3>町内会・自主防災組織の防災デー</h3>
+        <span class="plan-time">半日（3時間程度）／地域住民</span>
+      </div>
+      <div class="chain">
+        <span class="item" style="background:var(--bosai-bg);color:var(--bosai)">防災ビンゴゲーム</span><span class="plus">＋</span>
+        <span class="item" style="background:var(--bosai-bg);color:var(--bosai)">防災福祉マップづくり</span><span class="plus">＋</span>
+        <span class="item" style="background:var(--bosai-bg);color:var(--bosai)">サバメシ作り</span>
+      </div>
+      <p>ビンゴで場をあたためてから、まちを歩いて地図をつくり、最後はみんなでごはん。<strong>できあがった地図は、そのまま町内会の財産</strong>として残ります。</p>
+    </div>
+
+    <div class="plan">
+      <div class="plan-head">
+        <span class="plan-mark">C</span>
+        <h3>親子・地域の防災キャンプ</h3>
+        <span class="plan-time">1泊2日／家族・子ども会</span>
+      </div>
+      <div class="chain">
+        <span class="item" style="background:var(--bosai-bg);color:var(--bosai)">避難所体験</span><span class="plus">＋</span>
+        <span class="item" style="background:var(--bosai-bg);color:var(--bosai)">サバメシ作り</span><span class="plus">＋</span>
+        <span class="item" style="background:var(--fukushi-bg);color:var(--fukushi)">災害ボランティアセンター運営体験</span>
+      </div>
+      <p>夕方に避難所を開設し、サバメシで夕食、翌朝はボランティアセンターの運営まで。<strong>災害の1日を通しで体験</strong>する、いちばん濃いコースです。</p>
+    </div>
+
+    <div class="plan">
+      <div class="plan-head">
+        <span class="plan-mark">D</span>
+        <h3>まずは1回、90分から</h3>
+        <span class="plan-time">45〜90分／サロン・職場・PTA</span>
+      </div>
+      <div class="chain">
+        <span class="item" style="background:var(--fukushi-bg);color:var(--fukushi)">認知症サポーター養成講座</span>
+        <span class="plus">または</span>
+        <span class="item" style="background:var(--bosai-bg);color:var(--bosai)">防災ビンゴゲーム</span>
+      </div>
+      <p>準備の負担がいちばん軽い入門コース。会場と参加者だけご用意いただければ、あとは社協が持ち込みます。<strong>「まず一度やってみる」</strong>にどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 実施までの流れ ============ -->
+<section>
+  <div class="sec-head">
+    <span class="sec-eyebrow">実施までの流れ</span>
+    <h2>ご相談から、ふりかえりまで</h2>
+  </div>
+  <hr class="rule">
+  <p class="sec-note">目安は<strong>実施の3か月前からのご相談</strong>です。急ぎの場合もできる範囲で対応しますので、まずはお電話ください。日程が決まっていなくても大丈夫です。</p>
+
+  <div class="flow">
+    <div class="step">
+      <div class="when">3か月前〜</div>
+      <div class="step-body">
+        <div class="step-no">1</div>
+        <div>
+          <h3>まずは相談</h3>
+          <p>お電話・窓口・メールで「こんなことがしたい」とお声かけください。決まっていることが少なくても構いません。</p>
+          <div class="todo">お伝えいただきたいこと：だいたいの時期／参加する人（学年・年代）／だいたいの人数</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="when">2か月前</div>
+      <div class="step-body">
+        <div class="step-no">2</div>
+        <div>
+          <h3>打ち合わせ</h3>
+          <p>社協職員が伺うか、来ていただくかして、<strong>「今回いちばん伝えたいこと」</strong>を一緒に整理します。そのうえで、ぴったりのプログラムと時間割をご提案します。</p>
+          <div class="todo">決めること：ねらい／プログラム／日時・会場／当日の役割分担</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="when">1〜2か月前</div>
+      <div class="step-body">
+        <div class="step-no">3</div>
+        <div>
+          <h3>内容決定・お申し込み</h3>
+          <p>実施計画書と進行表をつくります。必要な資機材、講師・協力者、材料費の有無をここで確定します。</p>
+          <div class="todo">社協がすること：講師や当事者団体への依頼／資機材の確保／進行表の作成</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="when">3週間前〜</div>
+      <div class="step-body">
+        <div class="step-no">4</div>
+        <div>
+          <h3>準備</h3>
+          <p>会場のレイアウト、参加者の募集、案内チラシ、保険の加入手続きを進めます。チラシのひな型もお渡しできます。</p>
+          <div class="todo">主催者にお願いすること：会場予約／参加者への案内／名簿づくり／雨天時の判断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="when">前日・当日</div>
+      <div class="step-body">
+        <div class="step-no">5</div>
+        <div>
+          <h3>実施</h3>
+          <p>前日または当日の朝に会場設営と流れの確認。当日は受付から進行、片づけまで社協スタッフが一緒に動きます。写真もお撮りします。</p>
+          <div class="todo">当日の流れ：受付 → はじめのあいさつ → 体験 → ふりかえり → 終わりのあいさつ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="when">1週間以内</div>
+      <div class="step-body">
+        <div class="step-no">6</div>
+        <div>
+          <h3>ふりかえり</h3>
+          <p>アンケートの集計結果と写真をお届けします。参加者から出た「気になること」を一緒に読み、<strong>次にできること</strong>を考えるところまでがプログラムです。</p>
+          <div class="todo">その後へ：地域の見守り活動／次回の企画／広報紙・社協だよりでの紹介</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Q&A ============ -->
+<section>
+  <div class="sec-head">
+    <span class="sec-eyebrow">よくあるご質問</span>
+    <h2>はじめての方から、よくいただく質問</h2>
+  </div>
+  <hr class="rule">
+  <div class="qa">
+    <div class="qa-item">
+      <h3>費用はかかりますか？</h3>
+      <p>講師の派遣・資機材の貸出については、まずご相談ください。サバメシ作りなどの<strong>材料費は実費のご負担</strong>をお願いする場合があります。</p>
+    </div>
+    <div class="qa-item">
+      <h3>少人数でもできますか？</h3>
+      <p>10人程度から実施できます。大人数の場合は班に分けて、体験と講義を入れ替えながら進めます。</p>
+    </div>
+    <div class="qa-item">
+      <h3>雨が降ったらどうなりますか？</h3>
+      <p>まち歩きは、事前に撮った写真と地図を使う屋内版に切り替えられます。中止の判断は前日にご相談のうえ決めます。</p>
+    </div>
+    <div class="qa-item">
+      <h3>会場がありません。</h3>
+      <p>社協の会議室もご利用いただけます（要予約）。公民館や学校の空き教室のご相談にも応じます。</p>
+    </div>
+    <div class="qa-item">
+      <h3>けがをしたら心配です。</h3>
+      <p>ボランティア活動保険・行事用保険のご案内をします。体験前の安全確認と補助スタッフの配置も一緒に計画します。</p>
+    </div>
+    <div class="qa-item">
+      <h3>車いすの人や高齢の方も参加できますか？</h3>
+      <p>もちろんです。むしろ<strong>当事者の方に参加していただくと、体験の質が大きく変わります</strong>。参加しやすい進め方を一緒に考えます。</p>
+    </div>
+  </div>
+  <p class="footnote">
+    ※ 記載の所要時間・人数・用意するものは<strong>目安</strong>です。実際の内容、費用、貸出の条件は変更になる場合がありますので、お申し込みの際にご確認ください。
+  </p>
+</section>
+
+<!-- ============ お問い合わせ ============ -->
+<section>
+  <div class="contact">
+    <h2>お申し込み・お問い合わせ</h2>
+    <p class="lead">「うちでもできますか？」の一本のお電話から始まります。日程も内容も決まっていなくて大丈夫です。</p>
+    <div class="fields">
+      <div class="field"><span>だんたい／がっこう名</span></div>
+      <div class="field"><span>ご担当者</span></div>
+      <div class="field"><span>電話番号</span></div>
+      <div class="field"><span>希望の時期</span></div>
+      <div class="field"><span>参加する人・人数</span></div>
+      <div class="field"><span>やってみたいプログラム</span></div>
+    </div>
+    <div class="fill-note">
+      <strong>社会福祉法人 大郷町社会福祉協議会</strong><br>
+      住所：＿＿＿＿＿＿＿＿＿＿＿＿＿／電話：＿＿＿＿＿＿＿＿／FAX：＿＿＿＿＿＿＿＿<br>
+      メール：＿＿＿＿＿＿＿＿＿＿／受付時間：平日 ＿＿:＿＿ 〜 ＿＿:＿＿（土日祝・年末年始を除く）<br>
+      <span style="color:var(--ink-3)">※ 上の連絡先は、印刷前に社協の正しい情報を記入してください。</span>
+    </div>
+  </div>
+  <p class="footnote">
+    福祉教育・防災教育プログラムのご案内／発行：大郷町社会福祉協議会
+  </p>
+</section>
+
+</div>
