@@ -9,6 +9,7 @@
 - `osato-fukushi-bosai-program.html` — 案内資料本体（写真も埋め込み済みの1ファイル完結。ブラウザで開けます）
 - `育てよう地域のやさしい目_案内資料_A3.docx` — 同じ内容のWord版（A3・縦・全14ページ）
 - `build-docx.js` — Word版を作り直すスクリプト（`node build-docx.js`）
+- `make-qr.py` — 申込フォームのQRコードを埋め込むスクリプト（`python3 make-qr.py "フォームのURL"`）
 - `apps-script/application-form.gs` — 申込フォームと自動返信のプログラム
 - `form-setup-guide.html` — 申込フォームの設置手順書
 - `photos/` — 資料に使っている写真の元データ
@@ -55,3 +56,16 @@
 
 所要時間・人数・貸出条件は目安として記載しています。実際の運用に合わせて調整してください。
 費用については断定を避け「ご相談ください」という書き方にしてあります。
+
+## 申込フォームのQRコードを入れる
+
+案内資料の最後（お申し込み欄の右下）にQRコードの枠を用意してあります。
+Googleフォームを作成すると出てくる「配布用URL」を使って、次のコマンドで埋め込みます。
+
+```
+python3 make-qr.py "https://forms.gle/xxxxxxxx"
+node build-docx.js        # Word版にも反映する場合
+```
+
+HTMLにはSVGで直接埋め込まれるので、拡大しても粗くなりません。
+Word版用には `photos/form-qr.png` も同時に作られます。

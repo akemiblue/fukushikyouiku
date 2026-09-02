@@ -122,6 +122,16 @@ const programs = [
     photo: null },
 ];
 
+function qrBlock() {
+  const f = path.join(DIR, 'photos', 'form-qr.png');
+  if (!fs.existsSync(f)) return [];
+  return [
+    new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 320, after: 60 },
+      children: [new ImageRun({ data: fs.readFileSync(f), type: 'png', transformation: { width: 190, height: 190 } })] }),
+    p('スマホで読み取ると申込フォームが開きます', { size: 19, color: C.ink2, align: AlignmentType.CENTER, after: 0 }),
+  ];
+}
+
 // ============ ページ組み立て ============
 const children = [];
 
@@ -291,6 +301,7 @@ children.push(new Table({
     p('メール　community@oosato-syakyo.or.jp', { size: 22, after: 60 }),
     p('住所　宮城県黒川郡大郷町粕川字東長崎31-7', { size: 22, after: 60 }),
     p('受付時間　平日 8:30〜17:15（土日祝・年末年始を除く）／担当　金須・及川・千田', { size: 22, after: 0 }),
+    ...qrBlock(),
   ], CONTENT_W)] })],
 }));
 children.push(p('「育てよう！地域のやさしい目」事業　福祉教育・防災教育プログラムのご案内／発行：社会福祉法人 大郷町社会福祉協議会', { size: 18, color: C.ink3, before: 240, after: 0 }));
