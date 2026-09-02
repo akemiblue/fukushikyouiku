@@ -7,6 +7,10 @@
 ## ファイル
 
 - `osato-fukushi-bosai-program.html` — 案内資料本体（写真も埋め込み済みの1ファイル完結。ブラウザで開けます）
+- `育てよう地域のやさしい目_案内資料_A3.docx` — 同じ内容のWord版（A3・縦・全14ページ）
+- `build-docx.js` — Word版を作り直すスクリプト（`node build-docx.js`）
+- `apps-script/application-form.gs` — 申込フォームと自動返信のプログラム
+- `form-setup-guide.html` — 申込フォームの設置手順書
 - `photos/` — 資料に使っている写真の元データ
 
 ## 収録している内容
